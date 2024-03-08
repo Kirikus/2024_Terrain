@@ -48,13 +48,13 @@ double SphericalPoint::get_d() const {
 }
 
 void SphericalPoint::change_h(double new_h) {
-  double prev_d = get_d();
-  phi = atan(new_h / prev_d);
-  R = sqrt(new_h * new_h + prev_d * prev_d);
+  double current_d = get_d();
+  phi = atan(new_h / current_d);
+  R = sqrt(new_h * new_h + current_d * current_d);
 }
 
 void SphericalPoint::change_d(double new_d) {
-  double prev_h = get_h();
-  phi = atan(prev_h / new_d);
-  R = sqrt(prev_h * prev_h + new_d * new_d);
+  double current_h = get_h();
+  phi = atan(current_h / new_d);
+  R = sqrt(current_h * current_h + new_d * new_d);
 }
