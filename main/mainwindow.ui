@@ -671,6 +671,23 @@
         </item>
        </layout>
       </item>
+      <item>
+       <widget class="Line" name="line_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignRight">
+       <widget class="QCheckBox" name="checking_vegetation">
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string>Учитывать растительность</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
    </layout>
