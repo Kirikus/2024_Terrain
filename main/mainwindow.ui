@@ -47,6 +47,202 @@
         </item>
        </layout>
       </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="rlsLayout">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_rls_parameters">
+          <property name="text">
+           <string>Параметры РЛС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tab_rls">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="movable">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="tab_rls_1">
+           <attribute name="title">
+            <string>РЛС 1</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <layout class="QHBoxLayout" name="latitude_rlsLayout">
+                <item>
+                 <widget class="QLabel" name="label_rls_latitude">
+                  <property name="text">
+                   <string>Широта</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="rls_latitude_degrees"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rls_latitude_degrees">
+                  <property name="text">
+                   <string>°</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="rls_latitude_minutes"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rls_latitude_minutes">
+                  <property name="text">
+                   <string>'</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="rls_latitude_seconds"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rls_latitude_seconds">
+                  <property name="text">
+                   <string>&quot;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="west_rls">
+                  <property name="text">
+                   <string>W</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                  <attribute name="buttonGroup">
+                   <string notr="true">rls_latitude_buttonGroup</string>
+                  </attribute>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="east_rls">
+                  <property name="text">
+                   <string>E</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                  <attribute name="buttonGroup">
+                   <string notr="true">rls_latitude_buttonGroup</string>
+                  </attribute>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="longitude_rlsLayout">
+                <item>
+                 <widget class="QLabel" name="label_rls_longitude">
+                  <property name="text">
+                   <string>Долгота</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="rls_longitude_degrees"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rls_longitude_degrees">
+                  <property name="text">
+                   <string>°</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="rls_longitude_minutes"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rls_longitude_minutes">
+                  <property name="text">
+                   <string>'</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="rls_longitude_seconds"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rls_longitude_seconds">
+                  <property name="text">
+                   <string>&quot;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="north_rls">
+                  <property name="text">
+                   <string>N</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                  <attribute name="buttonGroup">
+                   <string notr="true">rls_longitude_buttonGroup</string>
+                  </attribute>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="south_rls">
+                  <property name="text">
+                   <string>S</string>
+                  </property>
+                  <attribute name="buttonGroup">
+                   <string notr="true">rls_longitude_buttonGroup</string>
+                  </attribute>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLabel" name="label_rls_range_of_action">
+                  <property name="text">
+                   <string>Дальность действия РЛС</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="rls_range_of_action"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_rls_km">
+                  <property name="text">
+                   <string>км</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_add_rls">
+           <attribute name="title">
+            <string>Добавить РЛС</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
    </layout>
@@ -66,7 +262,9 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
-  <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="rls_longitude_buttonGroup"/>
+  <buttongroup name="rls_latitude_buttonGroup"/>
+  <buttongroup name="obj_latitude_buttonGroup"/>
+  <buttongroup name="obj_longitude_buttonGroup"/>
  </buttongroups>
 </ui>
