@@ -688,6 +688,13 @@
         </property>
        </widget>
       </item>
+      <item alignment="Qt::AlignRight">
+       <widget class="QPushButton" name="launch">
+        <property name="text">
+         <string>Запустить</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
    </layout>
