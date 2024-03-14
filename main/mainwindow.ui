@@ -243,6 +243,298 @@
         </item>
        </layout>
       </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="objectLayout">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Параметры объекта</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="locationobjLayout">
+          <item>
+           <layout class="QHBoxLayout" name="latitude_objLayout">
+            <item>
+             <widget class="QLabel" name="label_obj_latitude">
+              <property name="text">
+               <string>Широта</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="obj_latitude_degrees"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_obj_latitude_degrees">
+              <property name="text">
+               <string>°</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="obj_latitude_minutes"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_obj_latitude_minutes">
+              <property name="text">
+               <string>'</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="obj_latitude_seconds"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_obj_latitude_second">
+              <property name="text">
+               <string>&quot;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="west_obj">
+              <property name="text">
+               <string>W</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">obj_latitude_buttonGroup</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="east_obj">
+              <property name="text">
+               <string>E</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">obj_latitude_buttonGroup</string>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="longitude_objLayout">
+            <item>
+             <widget class="QLabel" name="label_obj_longitude">
+              <property name="text">
+               <string>Долгота</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="obj_longitude_degrees"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_obj_longitude_degrees">
+              <property name="text">
+               <string>°</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="obj_longitude_minutes"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_obj_longitude_minutes">
+              <property name="text">
+               <string>'</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="obj_longitude_seconds"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_obj_longitude_seconds">
+              <property name="text">
+               <string>&quot;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="north_obj">
+              <property name="text">
+               <string>N</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">obj_longitude_buttonGroup</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="south_obj">
+              <property name="text">
+               <string>S</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">obj_longitude_buttonGroup</string>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="heightLayout">
+          <item>
+           <widget class="QLabel" name="label_height">
+            <property name="text">
+             <string>Высота над уровнем моря</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="obj_height"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_km">
+            <property name="text">
+             <string>км</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item alignment="Qt::AlignRight">
+         <widget class="QCheckBox" name="checking_movement">
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Объект двигается</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="speedXLayout">
+          <item>
+           <widget class="QLabel" name="label_speedX">
+            <property name="text">
+             <string>Скорость по X</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="speed_X">
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>800</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_kmhX">
+            <property name="text">
+             <string>км/ч</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="speedYLayout">
+          <item>
+           <widget class="QLabel" name="label_speedY">
+            <property name="text">
+             <string>Скорость по Y</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="speed_Y">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::NoEcho</enum>
+            </property>
+            <property name="placeholderText">
+             <string>800</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_kmhY">
+            <property name="text">
+             <string>км/ч</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="speedZLayout">
+          <item>
+           <widget class="QLabel" name="label_speedZ">
+            <property name="text">
+             <string>Скорость по Z</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="speed_Z">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>800</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_kmhZ">
+            <property name="text">
+             <string>км/ч</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
    </layout>
