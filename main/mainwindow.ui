@@ -619,6 +619,58 @@
         </item>
        </layout>
       </item>
+      <item>
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="selection_surfaceLayout">
+        <item>
+         <widget class="QLabel" name="label_selection_surface">
+          <property name="text">
+           <string>Выбор типа поверхности</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="selection_surfaceBox">
+          <item>
+           <property name="text">
+            <string>Пресная вода</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Морская вода</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Влажная (плодородная) почва</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Средняя почва</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Бедная (сухая) почва</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Снег, лед</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
    </layout>
