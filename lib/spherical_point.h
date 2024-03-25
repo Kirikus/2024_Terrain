@@ -2,6 +2,7 @@
 #define SPHERICALPOINT_H
 
 #include "abstract_point.h"
+#include "cartesian_point.h"
 #include <cmath>
 
 class SphericalPoint : public AbstractPoint {
@@ -16,6 +17,9 @@ public:
   double get_R() const { return R; }
   double get_phi() const { return phi; }
   double get_d() const;
+
+  const AbstractPoint &get_center() const { return center; }
+  const AbstractPoint &get_target() const;
 
   void change_R(double new_R) { R = new_R; }
   void change_phi(double new_phi) { phi = new_phi; }

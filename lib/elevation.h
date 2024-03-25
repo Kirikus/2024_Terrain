@@ -7,19 +7,19 @@ namespace Elevation {
 
 class Elevation {
 public:
-  virtual double h(const AbstractPoint &p) = 0;
+  virtual double h(const AbstractPoint &p) const = 0;
 };
 
 class Plain : public Elevation {
 public:
-  double h(const AbstractPoint &p) final { return 0; }
+  double h(const AbstractPoint &p) const final { return 0; }
 };
 
 class Mountain : public Elevation {
 public:
   Mountain(double height, double angle) : height{height}, angle{angle} {}
 
-  double h(const AbstractPoint &p) final;
+  double h(const AbstractPoint &p) const final;
 
 private:
   double height;
@@ -28,7 +28,7 @@ private:
 
 class GeoData : public Elevation {
 public:
-  double h(const AbstractPoint &p) final;
+  double h(const AbstractPoint &p) const final;
 };
 } // namespace Elevation
 #endif // HEIGHTMAP_H

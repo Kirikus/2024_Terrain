@@ -1,4 +1,5 @@
 #include "spherical_point.h"
+#include "cartesian_point.h"
 #include <iostream>
 
 // TODO: This class does not take in mind Earth curvature
@@ -45,6 +46,11 @@ double SphericalPoint::get_h() const {
 double SphericalPoint::get_d() const {
   double cos_phi = (cos(phi) <= 1e-10 && cos(phi) > 0) ? 0 : cos(phi);
   return R * cos_phi;
+}
+
+const AbstractPoint &SphericalPoint::get_target() const {
+  return CartesianPoint(get_x() + center.get_x(), get_y() + center.get_y(),
+                        get_h() + center.get_h());
 }
 
 void SphericalPoint::change_h(double new_h) {
