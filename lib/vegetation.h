@@ -5,15 +5,15 @@
 
 namespace Vegetation {
 
-enum class VegetationType { Nothing, Grass, Forest };
+enum class VegetationType { Nothing, Grass, Shrub, Forest };
 
 class Vegetation {
 public:
-  virtual VegetationType vegetation_type(const AbstractPoint &p) = 0;
+  virtual VegetationType vegetationType(const AbstractPoint &p) const = 0;
 };
 
 class None : public Vegetation {
-  VegetationType vegetation_type(const AbstractPoint &p) final {
+  VegetationType vegetationType(const AbstractPoint &p) const final {
     return VegetationType::Nothing;
   }
 };
@@ -22,7 +22,9 @@ class Constant : public Vegetation {
 public:
   Constant(VegetationType type) : type{type} {}
 
-  VegetationType vegetation_type(const AbstractPoint &p) final { return type; }
+  VegetationType vegetationType(const AbstractPoint &p) const final {
+    return type;
+  }
 
 private:
   VegetationType type;
@@ -30,7 +32,7 @@ private:
 
 class GeoData : public Vegetation {
 public:
-  VegetationType vegetation_type(const AbstractPoint &p) final;
+  VegetationType vegetationType(const AbstractPoint &p) const final;
 };
 } // namespace Vegetation
 #endif // VEGETATION_H

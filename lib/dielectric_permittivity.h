@@ -7,14 +7,14 @@ namespace DielectricPermittivity {
 
 class DielectricPermittivity {
 public:
-  virtual double dielectricPermittivity(const AbstractPoint &p) = 0;
+  virtual double dielectricPermittivity(const AbstractPoint &p) const = 0;
 };
 
 class Constant : public DielectricPermittivity {
 public:
   Constant(double coefficient) : coefficient{coefficient} {}
 
-  double dielectricPermittivity(const AbstractPoint &p) final {
+  double dielectricPermittivity(const AbstractPoint &p) const final {
     return coefficient;
   }
 
@@ -24,7 +24,7 @@ private:
 
 class GeoData : public DielectricPermittivity {
 public:
-  double dielectricPermittivity(const AbstractPoint &p) final;
+  double dielectricPermittivity(const AbstractPoint &p) const final;
 };
 } // namespace DielectricPermittivity
 #endif // DIELECTRIC_PERMITTIVITY_H
